@@ -1,0 +1,145 @@
+/* Global styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: url(../img/Ellipse188.png) no-repeat right top #012651;
+}
+
+a {
+    text-decoration: none;
+    color: #EFF3FF;
+}
+
+/* Layouts Styles */
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+header {
+    margin-top: 40px;
+    margin-bottom: 80px
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__menu {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+}
+
+.nav__logo {
+    color: #FEA05D;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+}
+
+.nav__auth {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-size: inherit;
+    transition: all 0.5s;
+    
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-primary:hover {
+    color: #933A14;
+    background-color: #FFA161;
+    border: 1px solid #FFA161;
+}
+
+.btn-secondary {
+    color: #933A14;
+    background-color: #FFA161;
+    border: 1px solid #FFA161;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+
+.hero {
+    display: flex;
+}
+
+
+.hero__pretitle {
+    color: #FEA05D;
+    line-height: 24px;
+    letter-spacing: 1.1px;
+}
+
+.hero__text-container {
+    margin-top: 70px;
+}
+
+.hero__title {
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.hero__title--orange {
+    color: #FEA05D;
+}
+
+/* .hero__title::after {
+    content: '';
+    background: url(../img/arrow.png) no-repeat center;
+    display: block;
+    height: 199px;
+    width: 100px;
+
+} */
+
+.hero__subtitle {
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+
+.hero__btns {
+    display: flex;
+    gap: 25px;
+}
+
