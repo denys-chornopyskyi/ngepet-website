@@ -7,9 +7,10 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    color: #fff;
     background: url(../img/Ellipse188.png) no-repeat right top #012651;
 }
 
@@ -102,7 +103,7 @@ header {
 }
 
 
-.hero__pretitle {
+.pretitle {
     color: #FEA05D;
     line-height: 24px;
     letter-spacing: 1.1px;
@@ -112,7 +113,7 @@ header {
     margin-top: 70px;
 }
 
-.hero__title {
+.title {
     font-size: 60px;
     line-height: 80px;
     letter-spacing: -0.5px;
@@ -121,7 +122,7 @@ header {
     position: relative;
 }
 
-.hero__title--orange {
+.title--orange {
     color: #FEA05D;
 }
 
@@ -134,9 +135,10 @@ header {
 
 } */
 
-.hero__subtitle {
+.subtitle {
     color: #fff;
     margin-bottom: 40px;
+    opacity: 0.7;
 
 }
 
@@ -150,6 +152,11 @@ header {
     left: 280px;
     top: 490px;
 }
+
+.info {
+    margin-bottom: 120px;
+}
+
 
 .info__text-container {
     max-width: 440px;
@@ -167,24 +174,37 @@ header {
     color: #fff;
     font-weight: bold;
     letter-spacing: -0.5px;
+    margin-bottom: 40px;
 }
 
 .info__subtitle {
     font-size: inherit;
     opacity: 0.7;
     color: #fff;
+    margin-bottom: 40px;
 }
 
 .card {
-    width: 317px;
+
     height: 348px;
     border-radius: 15px;
     background: rgba(61, 137, 225, 0.16);
     text-align: center;
-    padding: 36px;
+    padding: 36px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .btn-primary {
+    color: #933A14;
+    background-color: #FFA161;
+    border: 1px solid #FFA161;
 }
 
 .pic-container {
@@ -207,8 +227,267 @@ header {
     color: #fff;
     opacity: 0.7;
     margin-bottom: 8px;
+    font-size: 14px;
+
+}
+
+.info__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+.package-offer {
+    margin-bottom: 140px;
+}
+
+.package__text-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.monthly-or-yearly {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-size: 20px;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    margin: 0 25px;
+}
+
+.checkbox input {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox input + span {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    background: #486385;
+    border-color: #486385;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox input + span::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 0;
+    transition: all 0.4s ease;
+}
+
+.checkbox input:checked + span {
+    box-shadow: inset 0 0 0 10px green;
+}
+
+.checkbox input:checked + span::after {
+    left: 30px;
+}
+
+.package__text-container .subtitle {
+    margin-top: 20px;
+}
+
+.package__text-container .pretitle {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.recomendation-text {
+    margin-top: 24px;
+    color: #FFA161;
+    position: relative;
+}
+
+.recomendation-text::after {
+    content: url(/img/arrow-2.png);
+    position: absolute;
+    bottom: -2px;
+    margin-left: 8px;
 }
 
 
 
+
+
+
+.pricing-variants {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+
+.p-variant {
+    height: 600px;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.p-variant:hover {
+    transform: scale(1.05);
+    border: none;
+    background: #0B3668;
+    
+
+}
+
+.p-variant:hover .btn-primary{
+    color: #933A14;
+    background-color: #FFA161;
+    border: 1px solid #FFA161;
+}
+
+.cost span:first-child {
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cost span + span{
+    font-size: 14px;
+    opacity: 0.7;
+    color: #fff;
+}
+
+.pricing-name {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.pricing-text {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 25px 0;
+
+}
+
+.pricing-features {
+    padding: 32px;
+}
+
+.pricing-first-data {
+    border-bottom: 1px solid #fff;
+    padding: 32px 32px 0;
+}
+
+.features-list {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.f-list-item {
+    position: relative;
+    margin-left: 56px;
+    margin-top: 25px;
+}
+
+.tick-img::before {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    content: url(/img/tick.png);
+    width: 22px;
+    height: 22px;
+    
+
+}
+
+.cross-img::before {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    content: url(/img/cross.png);
+    width: 22px;
+    height: 22px;
+}
+
+.pricing-features .btn {
+    width: 100%;
+}
+
+
+.newsletter {
+    background: rgba(61, 137, 225, 0.16);
+    width: 100vw;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+
+}
+
+.newsletter-container .title {
+    font-size: 40px;
+}
+
+.newsletter-container input {
+    height: 64px;
+    width: 484px;
+    background: rgba(218, 235, 255, 0.16);
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer {
+    padding: 50px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .nav__logo{
+    margin-bottom: 16px;
+}
+
+.icon-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icon-container img {
+    height: 30px;
+    width: 30px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style-type: none;
+
+}
+
+.list-item {
+    opacity: 0.7;
+    font-size: 14px;
+
+}
+
+.other-content {
+    display: flex;
+    gap: 100px;
+}
 
